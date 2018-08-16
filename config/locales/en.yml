@@ -8,4 +8,5 @@ en:
   collapse_all: "Collapse All"
   show_description: "Show project description"
   show_progress: "Show project progress"
+  project_view_default_expand: "Default project view expand" 
   show_date: "Show project creation date"
