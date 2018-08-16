@@ -7,6 +7,10 @@
   <%= check_box_tag('settings[show_project_progress]', true, @settings['show_project_progress'])%>
 </p>
 <p>
+  <%= content_tag(:label, l(:project_view_default_expand)) %>
+  <%= check_box_tag('settings[project_view_default_expand]', true, @settings['project_view_default_expand'])%>
+</p>
+<p>
   <%= content_tag(:label, l(:show_date)) %>
   <%= check_box_tag('settings[show_project_date]', true, @settings['show_project_date'])%>
 </p>
