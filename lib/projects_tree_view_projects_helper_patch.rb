@@ -46,7 +46,10 @@ module ProjectsTreeView
     def favorite_project_modules_links(project)
       links = []
       menu_items_for(:project_menu, project) do |node|
-         links << link_to(extract_node_details(node, project)[0], extract_node_details(node, project)[1]) unless node.name == :overview
+	  if node.name != :new_object && node.name != :overview
+          details = extract_node_details(node, project)
+          links << link_to(details[0], details[1])
+        end
       end
       links.join(", ").html_safe
     end
