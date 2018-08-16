@@ -42,9 +42,14 @@
     <% project_tree(@projects) do |project, level| %>
       <% project_id = "%04d" % project.id %>
       <%  (plevel - level).times { ancestors.pop } if (level < plevel) %>
-      <% has_children = !project.children.empty? %>
-      <tr id="<%= project_id %>" class="<%= project.css_classes %> <%= level > 0 ? "hide #{ancestors.last}" : cycle("odd", "even") %>">
-        <td class="name" style="padding-left: <%= 18 * level %>px">
+      <% has_children = project.children.any? { |p| p.visible? } %>
+      <% Rails.logger.info "project #{project.identifier} has_children? #{has_children}: #{project.children}" %>
+      <% Rails.logger.info "plevel #{plevel} #{level}" %>
+      <% css = project.css_classes.gsub("parent", "").gsub("leaf", "") %>
+      <% Rails.logger.info "css #{css}" %>
+      <tr id="<%= project_id %>" class="<%= css %> <%= level > 0 ? "hide #{ancestors.last}" : cycle("odd", "even") %>">
+        <td class="name" style="padding-left: <%= (16 * level).to_s %>px">
+            <%= level > 0 ? "|" : "" %>
           <% if has_children %>
             <span class="expander" onclick="toggleShowHide(<%= "'#{project_id}'" %>)">&nbsp;</span>
           <% end %>
