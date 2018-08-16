@@ -20,6 +20,8 @@
 <table class="list">
   <% show_project_description = Setting.plugin_projects_tree_view['show_project_description'] %>
   <% show_project_progress = Setting.plugin_projects_tree_view['show_project_progress'] %>
+  <% project_view_default_expand = Setting.plugin_projects_tree_view['project_view_default_expand'] %>
+  <% project_view_mode = project_view_default_expand ? "open" : "hide" %>
   <% show_project_date = Setting.plugin_projects_tree_view['show_project_date'] %>   
   <thead>
     <tr>
@@ -47,7 +49,7 @@
       <% Rails.logger.info "plevel #{plevel} #{level}" %>
       <% css = project.css_classes.gsub("parent", "").gsub("leaf", "") %>
       <% Rails.logger.info "css #{css}" %>
-      <tr id="<%= project_id %>" class="<%= css %> <%= level > 0 ? "hide #{ancestors.last}" : cycle("odd", "even") %>">
+      <tr id="<%= project_id %>" class="<%= project.css_classes %> <%= level > 0 ? project_view_mode + " #{ancestors.last}" : cycle("odd", "even") %>"> 
         <td class="name" style="padding-left: <%= (16 * level).to_s %>px">
             <%= level > 0 ? "|" : "" %>
           <% if has_children %>
