@@ -1,5 +1,6 @@
-[note: 2018-06-16: changes are still untested]
+branch redmine3.x working om Redmine v3.4.6-stable.
 
+--
 =Projects Tree View plugin
 
 Projects Tree View is a Redmine plugin which will turn the projects index view into a tree view. It also
