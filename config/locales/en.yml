@@ -10,3 +10,4 @@ en:
   show_progress: "Show project progress"
   project_view_default_expand: "Default project view expand" 
   show_date: "Show project creation date"
+  show_project_modules: "Show Project Modules"
