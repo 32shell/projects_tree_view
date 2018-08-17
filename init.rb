@@ -20,6 +20,7 @@ Redmine::Plugin.register :projects_tree_view do
 	  'show_project_description' => true ,
           'show_project_progress' => true,
           'project_view_default_expand' => true,
-	  'show_project_date' => true ,	
+	  'show_project_date' => true,
+	  'show_project_modules' => true,
   }, :partial => 'settings/project_tree_settings'
 end
