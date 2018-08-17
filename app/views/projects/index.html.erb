@@ -59,14 +59,16 @@
           <span class="empty <%= "my-project" if User.current.member_of?(project) %>">&nbsp;</span></td>
         <% if show_project_description %>
           <td><%= textilizable project.short_description.gsub(/\!.+\!/,""), :project => project %></td>
-        <% end %>		
-        <td><%= favorite_project_modules_links(project) %></td>           
+         <% end %>
+	<% if show_project_modules %>
+          <td><%= favorite_project_modules_links(project) %></td>   
+	 <% end %>
         <% if show_project_progress %>
           <td><%= render_project_progress(project) %></td>
-        <% end %>
-		<% if show_project_date %>
+         <% end %>
+	<% if show_project_date %>
           <td align="center"><%= format_date(project.created_on) %></td>
-        <% end %>        
+         <% end %>        
       </tr>
       <% ancestors << project_id if has_children %>
       <% plevel = level %>
