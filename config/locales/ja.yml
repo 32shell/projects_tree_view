@@ -1,8 +1,8 @@
 ja:
 
-  field_versions: "バージョン"
-  field_go_to: "モジュール"
-  subprojects: "サブプロジェクト"
   expand_all: "すべて表示する"
   collapse_all: "サブプロジェクトを隠す"
   show_progress: "プロジェクトの進捗を表示する"
+  show_description: "プロジェクトの説明を表示する"
+  show_project_modules: "プロジェクトのモジュールを表示する"
+  show_created_on: "プロジェクトの作成日を表示する"
