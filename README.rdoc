@@ -1,4 +1,4 @@
-branch redmine3.x working om Redmine v3.4.6-stable.
+branch redmine3.x working on Redmine v3.4.6-stable.
 
 --
 =Projects Tree View plugin
