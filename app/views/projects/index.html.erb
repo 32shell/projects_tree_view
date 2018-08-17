@@ -29,8 +29,10 @@
       <th><%= l(:label_project)%></th>
 	    <% if show_project_description %>
         <th><%= l(:field_description)%></th>
-      <% end %>     
-      <th><%= l(:field_go_to)%></th>         
+      <% end %>  
+	<% if show_project_modules %>
+        <th><%= l(:field_go_to)%></th>
+      <% end %>
       <% if show_project_progress %>
         <th><%= l(:field_versions)%></th>
       <% end %>
