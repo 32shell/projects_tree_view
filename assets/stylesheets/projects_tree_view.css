@@ -1,6 +1,6 @@
 tr.parent { border: 1px solid #f8f8f8; }
 tr.parent td.name { white-space: nowrap;  width: 300px; }
-tr.child { border: 1px solid #f8f8f8; }
+tr.child { border: 0px solid #f8f8f8; }
 tr.child td.name { white-space: nowrap;  width: 300px; }
 tr.leaf td.name a { margin-left: 16px; }
 tr.parent span.expander { background-image: url(../images/bullet_toggle_plus.png); padding-left: 8px; margin-left: 0; cursor: pointer; }
