@@ -20,7 +20,7 @@ module ProjectsTreeView
 		end
         s << "<div style=\"margin-bottom: -2%;\">Issues: " +
           link_to("#{open_issues} open", :controller => 'issues', :action => 'index', :project_id => project, :set_filter => 1) +
-          "<small> / " + link_to("#{total_issues} total", :controller => 'issues', :action => 'index', :project_id => project, :status_id => 'c', :set_filter => 1) + "</small></div>" +
+          "<small> / " + link_to("#{total_issues} total", :controller => 'issues', :action => 'index', :project_id => project, :status_id => 'c', :set_filter => 1) + "<br></small></div>" +
 		s << "<div style=\"display: inline-flex; align-items: center;\">" +
           progress_bar(issues_closed_percent, :width => '30em', :legend => '%0.0f%' % issues_closed_percent) + "</div>"
       end
