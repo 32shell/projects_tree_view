@@ -11,6 +11,7 @@ propagates the tree view to the project show page's subprojects list.
 * Chris Peterson
 
 == Contributor
+* Vladimir Stepanov
 * Anton-zaytsev
 * Shadowbq 
 * cforce
