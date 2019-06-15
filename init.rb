@@ -10,11 +10,11 @@ end
 
 Redmine::Plugin.register :projects_tree_view do
   name 'Projects Tree View plugin'
-  author 'Chris Peterson and Github community'
+  author 'Github community + relese 32shell'
   description 'This is a Redmine plugin which will turn the projects page into a tree view'
-  url 'https://github.com/rayures/projects_tree_view'
-  version '0.0.9'
-  requires_redmine :version_or_higher => '3.0.0'
+  url 'https://github.com/32shell/projects_tree_view'
+  version '0.1.0'
+  requires_redmine :version_or_higher => '3.4.0'
 
   settings :default => {
 	  'show_project_description' => true ,
