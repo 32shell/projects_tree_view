@@ -1,0 +1,13 @@
+ru:
+  # Russian strings go here
+
+  field_versions: "Выполнение проекта"
+  field_go_to: "Модули"
+  subprojects: "подпроекты"
+  expand_all: "Развернуть все"
+  collapse_all: "Свернуть все"
+  show_description: "Показывать описание проекта"
+  show_progress: "Показывать процент выполнения проекта"
+  project_view_default_expand: "По-умолчанию отображать проекты развернутыми" 
+  show_date: "Показать дату создания проекта"
+  show_project_modules: "Показать модули проекта"
