@@ -22,7 +22,7 @@ module ProjectsTreeView
           link_to("#{open_issues} open", :controller => 'issues', :action => 'index', :project_id => project, :set_filter => 1) +
           "<small> / " + link_to("#{total_issues} total", :controller => 'issues', :action => 'index', :project_id => project, :status_id => 'c', :set_filter => 1) + "</small></div><br>" +
 		s << "<div style=\"display: inline-flex; align-items: center;\">" +
-          progress_bar(issues_closed_percent, :width => '50em', :legend => '%0.0f%' % issues_closed_percent) + "</div>"
+          progress_bar(issues_closed_percent, :width => '50em', :legend => '%0.0f%%' % issues_closed_percent) + "</div>"
       end
       project_versions = versions_open(project)
 
@@ -35,7 +35,7 @@ module ProjectsTreeView
             "<small> / " + link_to( l(:label_x_closed_issues_abbr, :count => version.closed_issues_count), :controller => 'issues', :action => 'index', :project_id => version.project, :status_id => 'c', :fixed_version_id => version, :set_filter => 1) + "</small>. "
             s << due_date_distance_in_words(version.effective_date) if version.effective_date
             s << "</div><div style=\"display: inline-flex; align-items: center;\">" +
-            progress_bar([version.closed_percent, version.completed_percent], :width => '30em', :legend => ('%0.0f%' % version.completed_percent)) + "</div>"
+            progress_bar([version.closed_percent, version.completed_percent], :width => '30em', :legend => ('%0.0f%%' % version.completed_percent)) + "</div>"
           end
         end
         s << "</div>"
