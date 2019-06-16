@@ -54,7 +54,6 @@
       <% Rails.logger.info "css #{css}" %>
       <tr id="<%= project_id %>" class="<%= project.css_classes %> <%= level > 0 ? project_view_mode + " #{ancestors.last}" : cycle("odd", "even") %>"> 
         <td class="name" style="padding-left: <%= (16 * level).to_s %>px">
-            <%= level > 0 ? "|" : "" %>
           <% if has_children %>
             <span class="expander" onclick="toggleShowHide(<%= "'#{project_id}'" %>)">&nbsp;</span>
           <% end %>
