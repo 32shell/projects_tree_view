@@ -22,7 +22,7 @@ module ProjectsTreeView
                          link_to( l(:label_x_open_issues_abbr, :count => open_issues), :controller => 'issues', :action => 'index', :project_id => project, :set_filter => 1) +
           "<small> / " + link_to( l(:label_x_closed_issues_abbr, :count => total_issues-open_issues), :controller => 'issues', :action => 'index', :project_id => project, :status_id => 'c', :set_filter => 1) +
           "<small> | &Sigma; " + link_to( "#{total_issues}", :controller => 'issues', :action => 'index', :project_id => project, :status_id => '*', :set_filter => 1) +		     
-	s << "</td><td>" +
+	s << "</td><td style=\"padding: 0px;\">" +
           progress_bar(issues_closed_percent, :width => '100px', :legend => '%0.0f%%' % issues_closed_percent) + "</td></tr></table>"
       end
 #      project_versions = versions_open(project)
