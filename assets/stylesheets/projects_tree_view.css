@@ -1,7 +1,9 @@
 tr.parent { border: 1px solid #f8f8f8; }
 tr.parent td.name { white-space: nowrap;  width: 300px; }
+tr.parent td.progress { width: 300px; padding: 0; }
 tr.child { border: 0px solid #f8f8f8; }
 tr.child td.name { white-space: nowrap;  width: 300px; }
+tr.child td.progress { width: 300px; padding: 0; }
 tr.leaf td.name a { margin-left: 16px; }
 span.empty { text-align:right; width: 100%; cursor: pointer; }
 tr.hide { display:none; }
