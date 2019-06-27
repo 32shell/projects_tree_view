@@ -66,7 +66,7 @@
           <td><%= favorite_project_modules_links(project) %></td>   
 	 <% end %>
         <% if show_project_progress %>
-          <td><%= render_project_progress(project) %></td>
+          <td class="progress"><%= render_project_progress(project) %></td>
          <% end %>
 	<% if show_project_date %>
           <td align="center"><%= format_date(project.created_on) %></td>
